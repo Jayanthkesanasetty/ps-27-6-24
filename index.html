@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>TASK ON 27-6-24</h1></center> <hr>
+    <pre style=" font-size: larger;">
+
+        1) Enter no of rows : 5 
+        o/p:
+         * 
+        * * 
+       * * * 
+      * * * * 
+     * * * * * 
+      * * * * 
+       * * * 
+        * * 
+         * 
+         
+         code:
+
+        n=5
+        for(i=1;i<=n;i++){
+            s=""
+        for(j=n-i;j>0;j--){
+            s=s+" "
+        }
+        for(k=i;k>0;k--){
+            s=s+"*"+" "
+        }
+        console.log(s)
+        }
+
+        for(ii=1;ii<n;ii++){
+            ss=""
+        for(jj=ii;jj>0;jj--){
+            ss=ss+" "
+        }
+        for(kk=n-ii;kk>0;kk--){
+            ss=ss+"*"+" "
+        }
+        console.log(ss)
+        }
+
+        * 
+        * * 
+       * * * 
+      * * * * 
+     * * * * * 
+      * * * * 
+       * * * 
+        * * 
+         * 
+
+         2) Enter no of rows : 5 
+         o/p:
+
+        * * * * * 
+         *     * 
+          *   * 
+           * * 
+            * 
+
+        code:
+         n=5
+        p=0
+        for(i=1;i<=n;i++){
+            s=""
+            for(k=i;k>0;k--){
+                s=s+" "
+            }
+            for(j=1;j<=n-p;j++){
+                if(i==1 || j==n || j==1 || i==n || i==n-j+1 )
+                s=s+"*"+" "
+                else
+                s=s+"  "
+            }
+            console.log(s)
+            p++
+        }
+
+        * * * * * 
+         *     * 
+          *   * 
+           * * 
+            * 
+
+        3.Enter no of rows :4
+        output :
+        2
+        3 5
+        7 11 13
+        17 19 23 29
+
+        code:
+        rows=+prompt("enter no of rows: ")
+        prime=2
+        for(a=1;a<=rows;a++){
+            pc=0,s=0
+        while(true){
+            c=0
+            for(i=2;i< prime;i++){
+                if(prime%i==0){
+                    c++
+                    break;
+                }
+            }
+            if(c==0)
+            {
+                pc++
+                s=s+prime+" "
+                if(pc==a){
+                    console.log(s)
+                    prime++
+                    break;
+                }
+            }
+            prime++
+        }
+        }
+
+        output:
+        enter no of rows: 4
+        2 
+        3 5 
+        7 11 13 
+        17 19 23 29 
+    </pre>
+</body>
+</html>
